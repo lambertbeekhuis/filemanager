@@ -223,7 +223,7 @@ class LivewireFilemanagerComponent extends Component
             ],
         ]);
 
-        $newFolder = new Folder;
+        $newFolder = new Folder();
         $newFolder->name = trim($this->newFolderName) ?: __('livewire-filemanager::filemanager.folder_without_title');
         $newFolder->slug = Str::slug(trim($this->newFolderName) ?: __('livewire-filemanager::filemanager.folder_without_title'));
         $newFolder->parent_id = ($this->currentFolder ? $this->currentFolder->id : null);
